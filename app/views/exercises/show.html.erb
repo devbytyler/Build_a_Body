@@ -5,5 +5,24 @@
   <%= @exercise.name %>
 </p>
 
+<p>
+  <strong>Target:</strong>
+  <%= @exercise.target %>
+</p>
+
 <%= link_to 'Edit', edit_exercise_path(@exercise) %> |
 <%= link_to 'Back', exercises_path %>
+
+<hr>
+
+<h1>Recent Workouts</h1>
+
+<% @workouts.each do |workout| %>
+  
+  <p>
+    <%= link_to workout.date.strftime("%B %d, %Y"), exercise_workout_path(@exercise.id, workout.id) %>
+  </p>
+
+<% end %>
+
+<%= link_to "Begin a new workout", new_exercise_workout_path(exercise_id: @exercise.id )  %>

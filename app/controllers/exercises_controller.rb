@@ -10,6 +10,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/1
   # GET /exercises/1.json
   def show
+    @workouts = @exercise.workouts
   end
 
   # GET /exercises/new
@@ -69,6 +70,6 @@ class ExercisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
-      params.require(:exercise).permit(:name)
+      params.require(:exercise).permit(:name, :target)
     end
 end

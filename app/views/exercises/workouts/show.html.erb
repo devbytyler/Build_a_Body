@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @workout.date.in_time_zone("Mountain Time (US & Canada)") %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @workout.notes %>
+</p>
+
+<p>
+  <strong>Exercise:</strong>
+  <%= @workout.exercise.name %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_workout_path(@exercise.id, @workout.id) %> |
+<%= link_to 'Back', @exercise %>
