@@ -13,13 +13,25 @@
 
   <div class="field">
     <%= f.label :date %>
-    <%= f.datetime_select :date %>
+    <%= f.datetime_select :date , { ampm: true, order: [:day, :month, :year] }  %>
   </div>
 
   <div class="field">
     <%= f.label :notes %>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, class: "form-control" %>
   </div>
+
+  <hr>
+    <h3>Sets</h3>
+
+    <div>
+      <%= f.fields_for :exercise_sets do |set_form| %>
+        <%= render 'exercise_set_fields', f: set_form %>
+      <% end %>
+      <div>
+        <%= link_to_add_association 'Add Set', f, :exercise_sets %>
+      </div>
+    </div>
 
   <div class="actions">
     <%= f.submit %>

@@ -1,0 +1,19 @@
+<div class="form-group">
+  <div class = "nested-fields">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="field">
+          <%= f.label :reps %>
+          <%= f.text_field :reps , class: "form-control"%>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="field">
+          <%= f.label :weight %>
+          <%= f.text_field :weight , class: "form-control"%>
+        </div>
+      </div>
+    </div>
+    <%= link_to_remove_association "Remove Set", f %>
+  </div>
+</div>

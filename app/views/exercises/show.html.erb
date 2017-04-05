@@ -20,7 +20,7 @@
 <% @workouts.each do |workout| %>
   
   <p>
-    <%= link_to workout.date.strftime("%B %d, %Y"), exercise_workout_path(@exercise.id, workout.id) %>
+    <%= link_to workout.date.strftime("%B %d, %Y -- %I:%M %P %Z"), exercise_workout_path(@exercise.id, workout.id) %>
   </p>
 
 <% end %>
