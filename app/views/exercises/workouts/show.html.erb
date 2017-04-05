@@ -17,3 +17,10 @@
 
 <%= link_to 'Edit', edit_exercise_workout_path(@exercise.id, @workout.id) %> |
 <%= link_to 'Back', @exercise %>
+
+<hr>
+
+<% @workout.exercise_sets.each do |set| %>
+<hr>
+  <%= set.inspect  %>
+<% end %>
