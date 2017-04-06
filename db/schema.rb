@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20170404172103) do
     t.string   "target"
   end
 
-  create_table "workouts", force: :cascaworkoutde do |t|
+  create_table "workouts", force: :cascade do |t|
     t.datetime "date"
     t.text     "notes"
     t.integer  "exercise_id"

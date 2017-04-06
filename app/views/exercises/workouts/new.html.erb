@@ -1,5 +1,7 @@
+<%= link_to 'Back to ' + @exercise.name, exercise_path(id: @exercise.id) %>
+
 <h1>New Workout for <%= @exercise.name  %></h1>
 
 <%= render 'form', workout: @workout %>
 
-<%= link_to 'Back', exercise_path(id: @exercise.id) %>
+
