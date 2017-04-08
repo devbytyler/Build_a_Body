@@ -30,7 +30,7 @@ class Exercises::WorkoutsController < ApplicationController
 
     respond_to do |format|
       if @workout.save
-        format.html { redirect_to exercise_url(@workout.exercise_id), notice: 'Workout was successfully created.' }
+        format.html { redirect_to exercise_url(@workout.exercise_id), notice: 'Workout was successfully added.' }
         format.json { render :show, status: :created, location: @exercise }
       else
         format.html { render :new }
@@ -58,7 +58,7 @@ class Exercises::WorkoutsController < ApplicationController
   def destroy
     @workout.destroy
     respond_to do |format|
-      format.html { redirect_to exercise_url(@workout.exercise_id), notice: 'Workout was successfully destroyed.' }
+      format.html { redirect_to exercise_url(@workout.exercise_id), notice: 'Workout was successfully removed.' }
       format.json { head :no_content }
     end
   end

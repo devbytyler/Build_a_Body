@@ -29,7 +29,7 @@ class ExercisesController < ApplicationController
 
     respond_to do |format|
       if @exercise.save
-        format.html { redirect_to @exercise, notice: 'Exercise was successfully created.' }
+        format.html { redirect_to @exercise, notice: 'Exercise was successfully added.' }
         format.json { render :show, status: :created, location: @exercise }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise.destroy
     respond_to do |format|
-      format.html { redirect_to exercises_url, notice: 'Exercise was successfully destroyed.' }
+      format.html { redirect_to exercises_url, notice: 'Exercise was successfully removed.' }
       format.json { head :no_content }
     end
   end

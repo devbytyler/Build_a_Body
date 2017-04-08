@@ -1,6 +1,6 @@
-<h1>Editing Exercise</h1>
+<p><%= link_to 'Back to all exercises', exercises_path, class: "btn btn-secondary"  %></p> 
+
+<h1>Editing <%= @exercise.name %></h1>
 
 <%= render 'form', exercise: @exercise %>
-
-<%= link_to 'Show', @exercise %> |
-<%= link_to 'Back', exercises_path %>
+<%= link_to 'See Workouts', @exercise, class: "btn btn-warning" %>

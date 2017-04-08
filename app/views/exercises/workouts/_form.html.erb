@@ -29,7 +29,7 @@
         <%= render 'exercise_set_fields', f: set_form %>
       <% end %>
       <div>
-        <%= link_to_add_association fa_icon("plus-circle"), f, :exercise_sets %>
+        <%= link_to_add_association (fa_icon("plus-circle") + " Add Set"), f, :exercise_sets %>
       </div>
     </div>
 

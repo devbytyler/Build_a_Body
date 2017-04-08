@@ -1,10 +1,10 @@
 * implement graphs.
 * implement ransack.
-* style sets in the workout show page.
-* fix local time.
-* add a time column in for the workout table.
-* Edit exercise form styling.
-* More specific title for edit exercise form.
 
+* refactor tables views into partials.
+* bootstrap alerts.
+* Add rotating plus buttons when hover
 * Build out routines.
 * Help page content.
+* Add data validations for models.
+* add active class to nav-bar elements.

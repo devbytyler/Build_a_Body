@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-6">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Set</th>
+          <th>Weight</th>
+          <th>Reps</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @workout.exercise_sets.each_with_index do |set, index| %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= set.weight.to_s + " lbs" %></td>
+            <td><%= set.reps %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

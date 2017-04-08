@@ -16,29 +16,6 @@
 <hr>
 
 <h4>Recent Workouts</h4>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Notes</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @workouts.each do |workout| %>
-      <tr>
-        <td><%= link_to workout.date.strftime("%B %d, %Y -- %I:%M %P %Z"), exercise_workout_path(@exercise.id, workout.id) %></td>
-        <td><%= truncate(workout.notes, length: 65) %></td>
-        <td><%= link_to fa_icon("pencil"), edit_exercise_workout_path(@exercise.id, workout.id) %></td>
-        <td>
-          <%= link_to fa_icon("trash"), exercise_workout_path(@exercise.id, workout.id), method: :delete, data: { confirm: 'Are you sure? This will delete all set data associated with this workout.' }%>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render "shared/workout_data_table" %>
 
 
