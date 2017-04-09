@@ -1,4 +1,5 @@
 * implement graphs.
+
 * implement ransack.
 
 * refactor tables views into partials.

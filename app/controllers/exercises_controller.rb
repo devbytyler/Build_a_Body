@@ -4,7 +4,8 @@ class ExercisesController < ApplicationController
   # GET /exercises
   # GET /exercises.json
   def index
-    @exercises = Exercise.by_target
+    @search = Exercise.ransack(params[:q])
+    @exercises = @search.result
   end
 
   # GET /exercises/1
